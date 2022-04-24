@@ -1,9 +1,9 @@
-const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
-const { CacheFirst } = require('workbox-strategies');
-const { registerRoute } = require('workbox-routing');
-const { CacheableResponsePlugin } = require('workbox-cacheable-response');
-const { ExpirationPlugin } = require('workbox-expiration');
-const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
+const { offlineFallback, warmStrategyCache } = require('workbox-recipes'); //JRM: NEED TO BUILD OUT.
+const { CacheFirst } = require('workbox-strategies'); //JRM: ACCOUNTED FOR--GOOD.
+const { registerRoute } = require('workbox-routing'); //JRM: NEED TO BUILD OUT.
+const { CacheableResponsePlugin } = require('workbox-cacheable-response'); //JRM: ACCOUNTED FOR--GOOD.
+const { ExpirationPlugin } = require('workbox-expiration'); //JRM: ACCOUNTED FOR--GOOD.
+const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute'); //JRM: ACCOUNTED FOR--GOOD.
 
 precacheAndRoute(self.__WB_MANIFEST);
 
@@ -27,4 +27,11 @@ warmStrategyCache({
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
-registerRoute();
+//JRM: may need fixing!
+registerRoute(
+
+  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+
+  offlineFallback()
+  
+);
