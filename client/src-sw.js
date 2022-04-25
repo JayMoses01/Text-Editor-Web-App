@@ -28,10 +28,10 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
 //JRM: may need fixing!
-registerRoute(
+// registerRoute(
 
-  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
+//   ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
 
-  offlineFallback()
+//   offlineFallback()
   
-);
+// );
