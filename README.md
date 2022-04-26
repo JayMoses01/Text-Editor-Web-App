@@ -3,7 +3,7 @@
 
 ## Description
 
-This is a text editor that runs in your Internet browser. It was designed to save the notes entered into it so that uppon closing and returning to this application (with our without an Internet connection), the user's notes would still remain on the page.
+This is a text editor that runs in a user's Internet browser. It was designed to save the notes entered into it so that upon closing and returning to this application (with our without an Internet connection), the user's notes would still remain on the page.
 
 This text editor was also designed as a Progressive Web Application (PWA) so that the user could install it and save the application to their desktop.
 
