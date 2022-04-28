@@ -7,6 +7,11 @@ This is a text editor that runs in a user's Internet browser. It was designed to
 
 This text editor was also designed as a Progressive Web Application (PWA) so that the user could install it and save the application to their desktop.
 
+## Link to Deployed Application
+
+Link to deployed application on Heroku: https://text-editor-web-app.herokuapp.com/
+
+
 ## Screenshots of Application
 
 ![image](./assets/images/text-editor-01.png)
